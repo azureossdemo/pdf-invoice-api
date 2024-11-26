@@ -1,10 +1,46 @@
 #!/bin/bash
 
-# Install the local .deb package
-dpkg -i /home/site/wwwroot/libglib2.0-0_2.74.6-2+deb12u4_amd64.deb
+# Update package list
+apt-get update
 
-# If there are any missing dependencies, fix them
-apt-get install -f -y
+# Install the required packages for Puppeteer and Chromium to run
+apt-get install -y \
+    ca-certificates \
+    fonts-liberation \
+    libasound2 \
+    libatk-bridge2.0-0 \
+    libatk1.0-0 \
+    libc6 \
+    libcairo2 \
+    libcups2 \
+    libdbus-1-3 \
+    libexpat1 \
+    libfontconfig1 \
+    libgbm1 \
+    libgcc1 \
+    libglib2.0-0 \
+    libgtk-3-0 \
+    libnspr4 \
+    libnss3 \
+    libpango-1.0-0 \
+    libpangocairo-1.0-0 \
+    libstdc++6 \
+    libx11-6 \
+    libx11-xcb1 \
+    libxcb1 \
+    libxcomposite1 \
+    libxcursor1 \
+    libxdamage1 \
+    libxext6 \
+    libxfixes3 \
+    libxi6 \
+    libxrandr2 \
+    libxrender1 \
+    libxss1 \
+    libxtst6 \
+    lsb-release \
+    wget \
+    xdg-utils
 
 # Run the default Node.js application
 node app.js

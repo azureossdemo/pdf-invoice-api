@@ -4,7 +4,7 @@
   "description": "A simple Node.js API for generating PDF invoices using html-pdf-node and puppeteer",
   "main": "app.js",
   "scripts": {
-    "start": "/startup.sh"
+    "start": "./startup.sh"
   },
   "dependencies": {
     "express": "^4.21.1",
